@@ -10,7 +10,7 @@ transition: slide-left
 mdc: true
 lineNumbers: true
 themeConfig:
-  primary: '#4285f4'
+  primary: "#4285f4"
 drawings:
   persist: false
 ---
@@ -52,8 +52,6 @@ layout: default
 </v-clicks>
 
 <div v-click class="mt-8 text-sm opacity-70">
-
-Code is **all TypeScript** throughout.
 
 </div>
 
@@ -578,20 +576,6 @@ A deterministic check in your code is a **boundary**. A sentence in a system pro
 
 </div>
 
----
-
-# Production notes & gotchas
-
-<v-clicks>
-
-- **Idempotency** — resume can replay; a transfer must commit **at most once** (idempotency key)
-- **Side effects after the interrupt** — especially on LangGraph, where the node re-runs
-- **Audit everything** — who requested, who approved, what changed, when (you'll need it)
-- **Timeouts & expiry** — a pending approval is a liability; expire stale ones
-- **Re-check RBAC on resume** — the resume endpoint is publicly reachable; trust nothing
-- **Fail closed** — if approval can't be obtained, the action does **not** happen
-
-</v-clicks>
 
 ---
 layout: center
@@ -631,5 +615,5 @@ Slides & code → **github.com/mainawycliffe/io-extended-slides**
 Genkit interrupts · LangGraph.js `interrupt()`
 <br/>
 Keep a human in the loop. 🪢
-
+Simbacares123?
 </div>
