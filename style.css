@@ -1,0 +1,141 @@
+/* =====================================================================
+   Google-inspired theme for the seriph deck.
+   Auto-loaded by Slidev from the project root, after the theme styles.
+   Light base, Google brand palette (blue / red / yellow / green),
+   solid Google-blue headings with the signature four-colour accent bar.
+   ===================================================================== */
+
+:root {
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #fbbc04;
+  --google-green: #34a853;
+  --google-yellow-ink: #f29900; /* darker yellow that reads on white */
+
+  --g-ink: #202124;   /* Google grey-900 body text */
+  --g-muted: #5f6368; /* Google grey-600 secondary text */
+
+  --slidev-theme-primary: #4285f4;
+}
+
+/* ---- Base: clean near-white with faint four-colour corner glows ------ */
+.slidev-layout {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(40rem 40rem at -8% -12%, rgba(66, 133, 244, 0.10), transparent 60%),
+    radial-gradient(34rem 34rem at 108% -6%, rgba(234, 67, 53, 0.07), transparent 60%),
+    radial-gradient(40rem 40rem at 104% 112%, rgba(52, 168, 83, 0.08), transparent 62%),
+    radial-gradient(34rem 34rem at -6% 116%, rgba(251, 188, 4, 0.08), transparent 62%);
+  background-attachment: fixed;
+  color: var(--g-ink);
+}
+
+/* ---- Headings: solid Google blue ------------------------------------- */
+.slidev-layout h1 {
+  color: var(--google-blue);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.slidev-layout h2 {
+  color: var(--g-muted);
+  font-weight: 600;
+}
+
+/* Signature four-colour bar under content-slide titles. */
+.slidev-layout:not(.cover):not(.section):not(.statement):not(.center):not(.fact):not(.end) h1::after {
+  content: '';
+  display: block;
+  width: 68px;
+  height: 5px;
+  margin-top: 10px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--google-blue) 0 25%,
+    var(--google-red) 25% 50%,
+    var(--google-yellow) 50% 75%,
+    var(--google-green) 75% 100%
+  );
+}
+
+/* ---- Section + statement dividers: bold Google-blue field ------------ */
+.slidev-layout.section,
+.slidev-layout.statement {
+  background-color: var(--google-blue) !important;
+  background-image: none !important;
+  color: #fff;
+}
+.slidev-layout.section h1,
+.slidev-layout.section h2,
+.slidev-layout.statement h1,
+.slidev-layout.statement h2,
+.slidev-layout.statement p,
+.slidev-layout.statement strong {
+  color: #fff !important;
+}
+.slidev-layout.section h2 { opacity: 0.92; }
+.slidev-layout.section h1::after {
+  content: '';
+  display: block;
+  width: 96px;
+  height: 6px;
+  margin-top: 14px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #fff 0 25%, var(--google-yellow) 25% 50%, var(--google-red) 50% 75%, var(--google-green) 75% 100%);
+}
+
+/* ---- Cover (title) slide: dark title + four-colour underline --------- */
+.slidev-layout.cover,
+.slidev-layout.fact,
+.slidev-layout.center,
+.slidev-layout.end {
+  background-color: #ffffff !important;
+}
+.slidev-layout.cover::before,
+.slidev-layout.cover::after { display: none !important; }
+.slidev-layout.cover h1 {
+  color: var(--g-ink);
+}
+.slidev-layout.cover h1::after {
+  content: '';
+  display: block;
+  width: 240px;
+  height: 6px;
+  margin: 16px auto 0;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--google-blue) 0 25%, var(--google-red) 25% 50%, var(--google-yellow) 50% 75%, var(--google-green) 75% 100%);
+}
+
+/* ---- Body text & emphasis ------------------------------------------- */
+.slidev-layout p,
+.slidev-layout li { color: var(--g-ink); }
+.slidev-layout strong { color: var(--google-blue); }
+.slidev-layout a {
+  color: var(--google-blue);
+  text-decoration-color: rgba(66, 133, 244, 0.5);
+}
+.slidev-layout ul > li::marker { color: var(--google-blue); }
+
+/* Deepen bright accent text so it reads on the light base. */
+.slidev-layout .text-amber-400 { color: var(--google-yellow-ink) !important; }
+.slidev-layout .text-red-400 { color: var(--google-red) !important; }
+
+/* ---- Code: light card with a subtle Google-blue edge ----------------- */
+.slidev-layout pre.shiki,
+.slidev-layout .slidev-code {
+  border: 1px solid rgba(66, 133, 244, 0.22);
+  border-radius: 0.6rem;
+  box-shadow: 0 10px 30px -16px rgba(66, 133, 244, 0.4);
+}
+.slidev-layout :not(pre) > code {
+  background: rgba(66, 133, 244, 0.1);
+  color: var(--google-blue);
+  border-radius: 0.3rem;
+  padding: 0.05em 0.35em;
+}
+
+/* ---- Selection ------------------------------------------------------- */
+::selection {
+  background: rgba(66, 133, 244, 0.22);
+  color: var(--g-ink);
+}

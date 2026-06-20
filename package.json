@@ -1,0 +1,21 @@
+{
+  "name": "io-extended-slides",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Human-in-the-Loop for AI Agents — the Interrupt paradigm + RBAC (Genkit · LangGraph.js)",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --with-clicks",
+    "export:pdf": "slidev export --with-clicks --output dist/io-extended-slides.pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.16.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.50.0"
+  }
+}
