@@ -1,6 +1,7 @@
 ---
 theme: seriph
 colorSchema: light
+routerMode: hash
 title: Keeping Agents on a Leash
 info: |
   ## Human-in-the-Loop for AI Agents
