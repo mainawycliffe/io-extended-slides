@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demo-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "demo/web", "start"],
+      "port": 4200,
+      "autoPort": false
+    },
+    {
+      "name": "slides",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["slidev", "--port", "3030"],
+      "port": 3030,
+      "autoPort": false
+    }
+  ]
+}
