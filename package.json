@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "deploy": "slidev build --base /io-extended-slides/ && touch dist/.nojekyll && gh-pages -d dist -t true",
+    "deploy": "slidev build --base /io-extended-slides/ && touch dist/.nojekyll && gh-pages -d dist -t",
     "export": "slidev export --with-clicks",
     "export:pdf": "slidev export --with-clicks --output dist/io-extended-slides.pdf"
   },
